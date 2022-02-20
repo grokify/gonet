@@ -10,7 +10,8 @@ GoNet
 
 `grokify/gonet` is part of a family of Go modules that provides extended
 functionality for common tasks in Go. HTTP related items are currently in
-[`grokify/gohttp`](https://github.com/grokify/gohttp).
+[`grokify/gohttp`](https://github.com/grokify/gohttp). Net and HTTP code
+with minimal dependencies are still located in [`grokify/mogo`](https://github.com/grokify/mogo).
 
 Go is a small language which is useful from a development and maintenance
 perspective but it can result in common tasks being more verbose than other 
