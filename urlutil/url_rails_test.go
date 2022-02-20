@@ -35,21 +35,21 @@ func TestUnmarshalRailsQS(t *testing.T) {
 		got := testObject{}
 		err := UnmarshalRailsQS(tt.v, &got)
 		if err != nil {
-			t.Errorf("jsonutil.UnmarshalRailsQS(\"%s\") Error: [%s]",
+			t.Errorf("urlutil.UnmarshalRailsQS(\"%s\") Error: [%s]",
 				tt.v, err.Error())
 		}
 		if !reflect.DeepEqual(tt.want, got) {
 			wantJSONBytes, err := json.Marshal(tt.want)
 			if err != nil {
-				t.Errorf("jsonutil.UnmarshalRailsQS(\"%s\") Error: [%s]",
+				t.Errorf("urlutil.UnmarshalRailsQS(\"%s\") Error: [%s]",
 					tt.v, err.Error())
 			}
 			gotJSONBytes, err := json.Marshal(got)
 			if err != nil {
-				t.Errorf("jsonutil.UnmarshalRailsQS(\"%s\") Error: [%s]",
+				t.Errorf("urlutil.UnmarshalRailsQS(\"%s\") Error: [%s]",
 					tt.v, err.Error())
 			}
-			t.Errorf("jsonutil.UnmarshalRailsQS(\"%s\") want [%v], got [%v]",
+			t.Errorf("urlutil.UnmarshalRailsQS(\"%s\") want [%v], got [%v]",
 				tt.v, string(wantJSONBytes), string(gotJSONBytes))
 		}
 	}
