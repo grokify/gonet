@@ -9,7 +9,8 @@ GoNet
 ## Overview
 
 `grokify/gonet` is part of a family of Go modules that provides extended
-functionality for common tasks in Go, 
+functionality for common tasks in Go. HTTP related items are currently in
+[`grokify/gohttp`](https://github.com/grokify/gohttp).
 
 Go is a small language which is useful from a development and maintenance
 perspective but it can result in common tasks being more verbose than other 
@@ -25,6 +26,9 @@ See the following modules for extended functionality.
 * GoHTTP - [github.com/grokify/gohttp](https://github.com/grokify/gohttp)
 * GoNet - [github.com/grokify/gonet](https://github.com/grokify/gonet)
 * GoPhoneNumbers - [github.com/grokify/gophonenumbers](https://github.com/grokify/gophonenumbers)
+
+Note: `grokify/gonet` was initially implemented in `grokify/mogo` and extracted
+to reduce the number of dependences in `grokify/mogo`.
 
 ## Documentation
 
