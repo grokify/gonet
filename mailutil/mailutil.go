@@ -66,10 +66,7 @@ func AddressIsValidFull(address string) (bool, string, string) {
 
 func DomainIsExampleOrTest(address string) bool {
 	rsEmailDomainExampleOrTest := rxEmailDomainExampleOrTest.FindStringSubmatch(address)
-	if len(rsEmailDomainExampleOrTest) > 0 {
-		return true
-	}
-	return false
+	return len(rsEmailDomainExampleOrTest) > 0
 }
 
 func HostnameIsValid(hostname string) bool {
@@ -85,10 +82,7 @@ func HostnameIsValid(hostname string) bool {
 
 func DomainIsValidSingleChar(domain string) bool {
 	rs := rxDomainSingleCharValid.FindStringSubmatch(domain)
-	if len(rs) > 0 {
-		return true
-	}
-	return false
+	return len(rs) > 0
 }
 
 type MailAddress struct {
@@ -120,7 +114,7 @@ func ParseAddress(address string) (MailAddress, error) {
 func ParseAddressSpec(addrSpec string) (string, string, error) {
 	rs := regexp.MustCompile(`^([^@]+)@([^@]+)$`).FindStringSubmatch(addrSpec)
 	if len(rs) < 1 {
-		return "", "", errors.New("RFC 5322 Address Spec not found.")
+		return "", "", errors.New("rfc-5322 address spec not found")
 	}
 	return rs[1], rs[2], nil
 }
