@@ -95,7 +95,10 @@ func (c *SftpClient) Get(sPathRem string, sPathLoc string) error {
 		rex := regexp.MustCompile(`\(SSH_FX_FAILURE\)`) // Hack, SFTP failure at 100
 		res := rex.FindStringSubmatch(err.Error())
 		if len(res) > 0 {
-			c.Connect()
+			err := c.Connect()
+			if err != nil {
+				return err
+			}
 			return c.Get(sPathRem, sPathLoc)
 		}
 		log.Fatal(err)
@@ -115,8 +118,9 @@ func (c *SftpClient) Put(sPathLoc string, sPathRem string) error {
 		return err
 	}
 	fRem, err := c.Client.Create(sPathRem)
-	if err == nil {
-		fRem.Write(ab)
+	if err != nil {
+		return err
 	}
+	_, err = fRem.Write(ab)
 	return err
 }

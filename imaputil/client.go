@@ -79,10 +79,11 @@ func (cm *ClientMore) Login() error {
 		cm.Config.Password)
 }
 
-func (cm *ClientMore) Logout() {
+func (cm *ClientMore) Logout() error {
 	if cm.Client != nil {
-		cm.Client.Logout()
+		return cm.Client.Logout()
 	}
+	return nil
 }
 
 func Host(hostname string, port int) string {
