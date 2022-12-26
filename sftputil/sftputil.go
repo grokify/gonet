@@ -2,7 +2,6 @@ package sftputil
 
 import (
 	"io"
-	"io/ioutil"
 	"log"
 	"os"
 	"regexp"
@@ -52,7 +51,7 @@ func (c *SftpClient) SetCredentials(hostname string, port int64, username string
 }
 
 func (c *SftpClient) GetKey(sKeyPath string) (key ssh.Signer, err error) {
-	buf, err := ioutil.ReadFile(sKeyPath)
+	buf, err := os.ReadFile(sKeyPath)
 	if err != nil {
 		return nil, err
 	}
@@ -113,7 +112,7 @@ func (c *SftpClient) Get(sPathRem string, sPathLoc string) error {
 }
 
 func (c *SftpClient) Put(sPathLoc string, sPathRem string) error {
-	ab, err := ioutil.ReadFile(sPathLoc)
+	ab, err := os.ReadFile(sPathLoc)
 	if err != nil {
 		return err
 	}
