@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/derekstavis/go-qs"
+	qs "github.com/derekstavis/go-qs"
 	"github.com/grokify/mogo/errors/errorsutil"
 )
 
