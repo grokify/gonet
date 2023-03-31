@@ -3,7 +3,7 @@ module github.com/grokify/gonet
 go 1.18
 
 require (
-	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
+	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
 	github.com/derekstavis/go-qs v0.0.0-20180720192143-9eef69e6c4e7
 	github.com/emersion/go-imap v1.2.1
 	github.com/grokify/mogo v0.49.1
