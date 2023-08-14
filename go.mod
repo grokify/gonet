@@ -7,7 +7,7 @@ require (
 	github.com/derekstavis/go-qs v0.0.0-20180720192143-9eef69e6c4e7
 	github.com/emersion/go-imap v1.2.1
 	github.com/grokify/mogo v0.52.0
-	github.com/pkg/sftp v1.13.5
+	github.com/pkg/sftp v1.13.6
 	golang.org/x/crypto v0.12.0
 )
 
