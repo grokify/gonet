@@ -10,7 +10,7 @@ require (
 	github.com/emersion/go-imap v1.2.1
 	github.com/grokify/mogo v0.62.5
 	github.com/pkg/sftp v1.13.6
-	golang.org/x/crypto v0.16.0
+	golang.org/x/crypto v0.17.0
 )
 
 require (
