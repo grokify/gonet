@@ -10,7 +10,7 @@ require (
 	github.com/emersion/go-imap v1.2.1
 	github.com/grokify/mogo v0.62.6
 	github.com/pkg/sftp v1.13.6
-	golang.org/x/crypto v0.22.0
+	golang.org/x/crypto v0.23.0
 )
 
 require (
@@ -20,6 +20,6 @@ require (
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/kr/fs v0.1.0 // indirect
 	golang.org/x/exp v0.0.0-20231219180239-dc181d75b848 // indirect
-	golang.org/x/sys v0.19.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/sys v0.20.0 // indirect
+	golang.org/x/text v0.15.0 // indirect
 )
